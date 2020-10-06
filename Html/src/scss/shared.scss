@@ -1,2 +1,75 @@
 @import "partials/params";
 @import "partials/mixins";
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  position: relative;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+  background-color: $white;
+  color: $black;
+  width: 100%;
+  min-height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+main{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  z-index: 1;
+  flex-grow: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p{
+  color: $black;
+  line-height: 1.2em;
+  padding: 0;
+  margin: 0;
+}
+
+div{
+  color: $black;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  color: $black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+  z-index: 2;
+  @media screen and (min-width: 768px) {
+    padding: 0 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 0;
+  }
+}

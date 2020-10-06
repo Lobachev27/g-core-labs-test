@@ -9,13 +9,128 @@
   <meta name="title" content=""/>
   <meta name="description" content=""/>
   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/latest/normalize.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./css/swiper.min.css">
   <link rel="stylesheet" href="./css/style.css">
   <link rel="shortcut icon" href="./favicon.ico">
 </head>
 
 <body>
-
+<main class="main">
+  <section class="storage">
+    <div class="container">
+      <h1 class="storage__title">Объектное хранилище</h1>
+      <div class="storage__description">Храните контент рядом с клиентами в Европе, Азии и США</div>
+      <div class="storage__wrapper">
+        <div class="storage__slider">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="storage__city">
+                  <img class="storage__city-img" src="./img/miami.jpg">
+                  <div class="storage__city-name active" data-id="0">Miami</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="storage__city">
+                  <img class="storage__city-img" src="./img/amsterdam.jpg">
+                  <div class="storage__city-name" data-id="1">Amsterdam</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="storage__city">
+                  <img class="storage__city-img" src="./img/singapore.jpg">
+                  <div class="storage__city-name" data-id="2">Singapore</div>
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="storage__city">
+                  <img class="storage__city-img" src="./img/luhembourg.jpg">
+                  <div class="storage__city-name" data-id="3">Luxembourg</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="storage__arrow swiper-button-prev"></div>
+          <div class="storage__arrow swiper-button-next"></div>
+        </div>
+        <div id="miami" class="storage__info visible">
+          <div class="storage__info-box">
+            <div class="storage__info-caption">SFTP хранилище в Амстердаме, Сингапуре и Майами</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Поддержка протоколов SFTP и SSH</li>
+              <li class="storage__info-item">Подключение по публичному SSH-ключу или паролю</li>
+              <li class="storage__info-item">Гибкая синхронизация Rsync</li>
+            </ul>
+          </div>
+          <div class="storage__info-box">
+            <div class="storage__info-caption">S3 хранилище в Люксембурге, Амстердаме, на Востоке и Западе США</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Не нужно вносить изменения в S3-совместимое приложение</li>
+              <li class="storage__info-item">Защита от случайного удаления, ошибок софта и вредоносных ботов</li>
+              <li class="storage__info-item">Время ответа сервера в пределах 15 мс</li>
+            </ul>
+          </div>
+        </div>
+        <div id="amsterdam" class="storage__info">
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Амстердама 1</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 1.1</li>
+              <li class="storage__info-item">Описание 1.2</li>
+              <li class="storage__info-item">Описание 1.3</li>
+            </ul>
+          </div>
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Амстердама 2</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 2.1</li>
+              <li class="storage__info-item">Описание 2.2</li>
+              <li class="storage__info-item">Описание 2.3</li>
+            </ul>
+          </div>
+        </div>
+        <div id="singapore" class="storage__info">
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Сингапура 1</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 1.1</li>
+              <li class="storage__info-item">Описание 1.2</li>
+              <li class="storage__info-item">Описание 1.3</li>
+            </ul>
+          </div>
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Сингапура 2</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 2.1</li>
+              <li class="storage__info-item">Описание 2.2</li>
+              <li class="storage__info-item">Описание 2.3</li>
+            </ul>
+          </div>
+        </div>
+        <div id="luxembourg" class="storage__info">
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Люксембурга 1</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 1.1</li>
+              <li class="storage__info-item">Описание 1.2</li>
+              <li class="storage__info-item">Описание 1.3</li>
+            </ul>
+          </div>
+          <div class="storage__info-box">
+            <div class="storage__info-caption">Заголовок для Люксембурга 2</div>
+            <ul class="storage__info-list">
+              <li class="storage__info-item">Описание 2.1</li>
+              <li class="storage__info-item">Описание 2.2</li>
+              <li class="storage__info-item">Описание 2.3</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <a class="storage__more" href="javascript:void(0);">Подробнее о хранилище</a>
+    </div>
+  </section>
+</main>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="./js/swiper.min.js"></script>
 <script src="./js/script.js"></script>

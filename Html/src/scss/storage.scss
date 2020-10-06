@@ -1,2 +1,230 @@
 @import "partials/params";
 @import "partials/mixins";
+
+.storage{
+  position: relative;
+  padding: 40px 0 60px;
+  @media screen and (min-width: 768px) {
+    padding: 55px 0 75px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 70px 0 90px;
+  }
+  &__title{
+    font-size: 26px;
+    font-weight: 400;
+    text-align: center;
+    @media screen and (min-width: 768px) {
+      font-size: 30px;
+    }
+    @media screen and (min-width: 1200px) {
+      font-size: 34px;
+    }
+  }
+  &__description{
+    font-size: 16px;
+    text-align: center;
+    margin-top: 20px;
+  }
+  &__slider{
+    position: relative;
+    width: 100%;
+    margin-top: 30px;
+    @media screen and (min-width: 768px) {
+      margin-top: 50px;
+    }
+    @media screen and (min-width: 1000px) {
+      display: block;
+    }
+  }
+  & .swiper-wrapper{
+    position: relative;
+    width: 100%;
+    @media screen and (min-width: 1000px) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  & .swiper-slide{
+    @media screen and (min-width: 1000px) {
+      width: calc(25% - 8px);
+    }
+  }
+  & .swiper-button-next,
+  & .swiper-button-prev{
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    outline: none;
+    width: 36px;
+    height: 36px;
+    top: 50%;
+    transition: all 0.5s;
+    &:hover{
+      transition: 0.5s;
+    }
+    @media screen and (min-width: 768px) {
+      width: 44px;
+      height: 44px;
+    }
+    @media screen and (min-width: 1000px) {
+      display: none;
+    }
+  }
+  & .swiper-button-prev{
+    background: url("../img/arrow.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    left: -15px;
+    @media screen and (min-width: 768px) {
+      left: -22px;
+    }
+    &:hover{
+      background: url("../img/arrow-hover.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  & .swiper-button-next{
+    background: url("../img/arrow.svg") no-repeat;
+    background-position: center;
+    background-size: cover;
+    transform: rotate(180deg) translateY(-5%);
+    right: -15px;
+    @media screen and (min-width: 768px) {
+      right: -22px;
+    }
+    &:hover{
+      background: url("../img/arrow-hover.svg") no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+  &__city{
+    position: relative;
+    width: 100%;
+    height: 340px;
+    overflow: hidden;
+    cursor: pointer;
+    &-img{
+      position: absolute;
+      min-width: 100%;
+      min-height: 100%;
+      max-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%,-50%);
+      opacity: 1;
+    }
+    &-name{
+      position: relative;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 30px;
+      text-transform: uppercase;
+      font-weight: 300;
+      color: $white;
+      z-index: 2;
+      @media screen and (min-width: 1200px) {
+        font-size: 34px;
+      }
+      &.active,
+      &:hover{
+        &:before{
+          background-color: rgba(0,0,0,0.1);
+          transition: 0.5s;
+        }
+      }
+      &:before{
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: rgba(0,0,0,0.55);
+        z-index: -1;
+        transition: 0.5s;
+      }
+    }
+  }
+  &__info{
+    display: none;
+    &.visible{
+      display: block;
+      @media screen and (min-width: 1000px) {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+    }
+    &-box{
+      background-color: $gray;
+      padding: 30px;
+      margin-top: 8px;
+      @media screen and (min-width: 1000px) {
+        width: calc(50% - 4px);
+      }
+      @media screen and (min-width: 1200px) {
+        padding: 30px 50px;
+      }
+    }
+    &-caption{
+      font-size: 16px;
+      line-height: 1.4em;
+      @media screen and (min-width: 768px) {
+        font-size: 18px;
+      }
+    }
+    &-list{
+      list-style: none;
+    }
+    &-item{
+      position: relative;
+      font-size: 14px;
+      line-height: 1.4em;
+      padding-left: 32px;
+      margin-top: 20px;
+      @media screen and (min-width: 768px) {
+        font-size: 16px;
+      }
+      &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 22px;
+        height: 22px;
+        background: url("../img/check.svg") no-repeat;
+        background-position: center;
+        background-size: contain;
+        @media screen and (min-width: 768px) {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+      }
+    }
+  }
+  &__more{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border: 1px solid $orange;
+    background-color: $orange;
+    color: $white;
+    border-radius: 5px;
+    max-width: 300px;
+    height: 45px;
+    margin: 40px auto 0;
+    transition: 0.3s;
+    &:hover{
+      background-color: $white;
+      color: $orange;
+      transition: 0.3s;
+    }
+  }
+}
